@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormGeoShape", "FormGeoShape\FormGeoShape.csproj", "{D6FBA571-9E92-4B09-80EF-5267D67D5CCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6FBA571-9E92-4B09-80EF-5267D67D5CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6FBA571-9E92-4B09-80EF-5267D67D5CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6FBA571-9E92-4B09-80EF-5267D67D5CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6FBA571-9E92-4B09-80EF-5267D67D5CCF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF3DFCF9-FB16-4640-9BC7-DC937C736EAB}
+	EndGlobalSection
+EndGlobal
