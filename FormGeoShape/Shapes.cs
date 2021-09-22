@@ -28,8 +28,21 @@ namespace FormGeoShape
             this.angleD = angleD;
         }
 
-        public void returnShape(double angleA, double angleB, double angleC)
+        public void ReturnShape(double angleA, double angleB, double angleC)
         {
+            //check if can form triangle
+            if (angleA == 0 || angleB == 0 || angleC == 0 )
+            {
+                Console.WriteLine("Unable to form any shape with the provided angles!");
+                Console.WriteLine();
+            }
+            
+            if ((angleA + angleB + angleC) > 180.0)
+            {
+                Console.WriteLine("Unable to form any shape with the provided angles!");
+                Console.WriteLine();
+            }
+
             //Check for right angle
             if((angleA == 90.0) || (angleB == 90.0) || (angleC == 90.0))
             {
@@ -95,9 +108,59 @@ namespace FormGeoShape
                 Console.WriteLine();
             }
         }
-        public void returnShape(double angleA, double angleB, double angleC, double angleD)
+        public void ReturnShape(double angleA, double angleB, double angleC, double angleD)
         {
+            //Check if able to form shape
+            if ((angleA == 0 && angleB == 0) || (angleA == 0 && angleC == 0) ||
+                   (angleB == 0 && angleC == 0) || (angleB == 0 && angleD == 0) ||
+                   (angleC == 0 && angleD == 0) || (angleC == 0 && angleD == 0) ||
+                   (angleD == 0 && angleA == 0))
+            {
+                Console.WriteLine("Unable to form any shape with the provided angles!");
+                Console.WriteLine();
+            }
 
+            if ((angleA + angleB + angleC + angleD) > 360.0)
+            {
+                Console.WriteLine("Unable to form any shape with the provided angles!");
+                Console.WriteLine();
+            }
+
+            //Check what kind of shapes
+            if (angleA == 90.0 && angleB == 90.0 && angleC == 90.0 && angleD == 90.0)
+            {
+                Console.WriteLine("Are all 4 sides equal? (Y / N)");
+                string ans = Console.ReadLine();
+                Console.WriteLine();
+                if (ans == "Y" || ans == "y")
+                {
+                    Console.WriteLine("The given angles can form a Square!");
+                    Console.WriteLine();
+                }
+                else if (ans == "N" || ans == "n")
+                {
+                    Console.WriteLine("The given angles can form a Rectangle!");
+                    Console.WriteLine();
+                }
+                else if (ans == "")
+                {
+                    Console.WriteLine("No entry detected! Nothing can be formed!");
+                    Console.WriteLine();
+                }
+                else
+                {
+                   Console.WriteLine("Invalid answer! Nothing can be formed!");
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.WriteLine("The given angles can form a 4 sided polygon!");
+                Console.WriteLine("Unfortunately, database does not have enough info to form a accurate deduction.");
+                Console.WriteLine("Please check again in the future!");
+                Console.WriteLine("Thank you!");
+                Console.WriteLine();
+            }
         }
     }
 }
